@@ -1,0 +1,22 @@
+version: '3'
+services:
+
+  # yii2
+  yii:
+    image: ${YII2_IMAGE_NAME}:${YII2_IMAGE_VERSION}
+    volumes:
+      - type: bind
+        source: /var/www/html
+        target: /app
+    ports:
+      - '8000:80'
+
+  # MySQL
+  mysql:
+    image: ${MYSQL_IMAGE_NAME}:${MYSQL_IMAGE_VERSION}
+    environment:
+      - MYSQL_DATABASE=${MYSQL_DATABASE}
+      - MYSQL_USER=${MYSQL_USER}
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+    ports:
+      - '3306:3306'

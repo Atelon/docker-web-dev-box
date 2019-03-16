@@ -1,0 +1,15 @@
+*.swp
+_host-volumes
+
+# Windows OS files
+Thumbs.db
+Desktop.ini
+
+# Mac DS_Store Files
+.DS_Store
+
+# Logs
+*.log
+
+# Linux OS files
+desktop.ini
