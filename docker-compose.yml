@@ -6,7 +6,7 @@ services:
   yii:
     image: ${YII2_IMAGE_NAME}:${YII2_IMAGE_VERSION}
     volumes:
-      -  yii2-vol:/var/www/html
+      -  yii2-vol:/app
     ports:
       - '8000:80'
     networks:
