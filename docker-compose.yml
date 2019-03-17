@@ -5,9 +5,7 @@ services:
   yii:
     image: ${YII2_IMAGE_NAME}:${YII2_IMAGE_VERSION}
     volumes:
-      - type: bind
-        source: /var/www/html
-        target: /app
+      -  yii2-vol:/var/www/html
     ports:
       - '8000:80'
 
@@ -20,3 +18,14 @@ services:
       - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
     ports:
       - '3306:3306'
+
+networks:
+  yii2network:
+
+volumes:
+  yii2-vol:
+    driver: local
+    driver_opts:
+      type: none
+      device: /app
+      o: bind
