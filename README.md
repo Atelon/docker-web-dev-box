@@ -2,8 +2,8 @@
 Yii2 framework with MySQL 5.6.
 
 ## Requirements
-* Docker
+* Docker Compose (with support of the Compose file format version 3+)
 
-## Using
+## Usage
 
-    $ blank description
+    $ docker-compose up -d

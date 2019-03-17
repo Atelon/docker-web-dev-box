@@ -8,7 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Bug fixes.
 
-## [0.0.1] - 2019-03-16
+## [0.0.1] - 2019-03-17
 ### Added
 - Changelog.
 - Docker compose file.
