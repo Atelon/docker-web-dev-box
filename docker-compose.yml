@@ -9,6 +9,8 @@ services:
       -  yii2-vol:/var/www/html
     ports:
       - '8000:80'
+    networks:
+      - yii2network
 
   # MySQL
   mysql:
@@ -19,6 +21,8 @@ services:
       - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
     ports:
       - '3306:3306'
+    networks:
+      - yii2network
 
 networks:
   yii2network:
